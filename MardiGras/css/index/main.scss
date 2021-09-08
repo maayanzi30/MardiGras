@@ -1,0 +1,426 @@
+// :root
+
+// colors
+$baseColor-1: #9453a6;
+$baseColor-2: #8cbf3f;
+$baseColor-3: #f2cc0f;
+$baseColor-4: #f2f2f2;
+$baseColor-5: #0d0d0d;
+$baseLinerGardient: linear-gradient(
+  242deg,
+  rgba(148, 83, 166, 1) 9%,
+  rgba(140, 191, 63, 1) 45%,
+  rgba(242, 204, 15, 1) 94%
+);
+//fonts and sizes
+
+$headingFont: 'Pattaya';
+$headingFont2: 'Henny Penny';
+$textFont: 'Roboto', 'sans-serif';
+$baseSize: 1.3rem;
+$baseHeading: 2em;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
+.slider .carousel-item {
+  animation: 20s slidy infinite;
+  background-size: cover;
+}
+
+img.d-block.w-100 {
+  height: 800px;
+}
+
+.sliderImg .mobileImg {
+  width: 100%;
+  padding-top: 95px;
+}
+
+h5 {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: 100%;
+  font-size: $baseSize;
+  padding: 10px;
+  margin-bottom: 32px;
+}
+
+.mardi {
+  width: 100%;
+  font-size: $baseHeading;
+  padding: 50px 0;
+}
+
+.mardi-cards {
+  background: #ece8e3;
+}
+
+.mardiHeader {
+  font-size: $baseHeading;
+  padding-right: 200px;
+  text-align: center;
+}
+
+.word {
+  position: absolute;
+  opacity: 0;
+  padding-left: 16px;
+}
+
+.letter {
+  display: inline;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.fun {
+  color: $baseColor-1;
+}
+
+.music {
+  color: #2980b9;
+}
+
+.parades {
+  color: #c0392b;
+}
+
+.excitement {
+  color: #16a085;
+}
+
+p.read-more-wrap {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cards-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 30px auto;
+  cursor: pointer;
+  transition: 0.4s;
+  border: 1px solid black;
+
+  max-width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+}
+
+.card .hover-text {
+  position: absolute;
+  bottom: 0;
+  background: #313131;
+  color: white;
+  text-align: center;
+  padding-top: 25px;
+  box-sizing: border-box;
+  transition: 0.5s ease-in-out;
+  width: 100%;
+  height: 25%;
+  padding: 0 30px;
+}
+.headline {
+  font-family: $headingFont;
+  letter-spacing: 3px;
+  font-size: 20px;
+  padding-top: 25px;
+}
+.card:hover .hover-text {
+  height: 100%;
+  width: 100%;
+  background: rgba(49, 49, 49, 0.5);
+}
+.card .content {
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s 0.3s;
+  transform: translatey(50px);
+}
+.card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  transform: translatey(0px);
+  font-size: 18px;
+  font-family: '$textFont';
+  font-weight: 700;
+  text-align: justify;
+  margin-top: 7px;
+  line-height: 1.3;
+}
+.card.\32 {
+  background-color: #3a3a3a;
+}
+
+@media (max-width: 576px) {
+  .mobileImg1 {
+    display: block;
+  }
+  .mobileImg1 img {
+    width: 100%;
+    height: 300px;
+  }
+  .desktop {
+    display: none;
+  }
+  .mardi {
+    width: 100%;
+    padding-top: 20px;
+  }
+  h2.mardiHeader {
+    font-size: 26px;
+    text-align: center;
+    padding-right: 150px;
+  }
+  .word {
+    padding-left: 7px;
+    font-size: 26px;
+  }
+  p.read-more-wrap {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .cards-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 30px auto;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 1px solid black;
+
+    max-width: 300px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+      -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+  }
+
+  .card img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .card .hover-text {
+    position: absolute;
+    bottom: 0;
+    background: #313131;
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+    width: 100%;
+    height: 25%;
+    padding: 0 30px;
+  }
+  .headline {
+    font-family: $headingFont;
+    letter-spacing: 3px;
+    font-size: 20px;
+    padding-top: 25px;
+  }
+  .card:hover .hover-text {
+    height: 100%;
+    width: 100%;
+    background: rgba(49, 49, 49, 0.5);
+  }
+  .card .content {
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s 0.3s;
+    transform: translatey(50px);
+  }
+  .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    transform: translatey(0px);
+    font-size: 18px;
+    font-family: '$textFont';
+    font-weight: 700;
+    text-align: justify;
+    margin-top: 7px;
+    line-height: 1.3;
+  }
+}
+
+@media (min-width: 576px) {
+  .mobileImg1 {
+    display: block;
+  }
+  .mobileImg1 img {
+    width: 100%;
+  }
+
+  .desktop {
+    display: none;
+  }
+  .mard .mardi {
+    width: 100%;
+  }
+  .mardiHeader {
+    font-size: 34px;
+    padding-right: 130px;
+    justify-content: center;
+  }
+  span .word {
+    font-size: 34px;
+  }
+  p.read-more-wrap {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 20px;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobileImg1 {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+  img.d-block.w-100 {
+    height: 600px;
+  }
+  .mardiHeader {
+    font-size: 40px;
+    justify-content: center;
+  }
+  span .word {
+    font-size: 40px;
+  }
+  p.read-more-wrap {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 20px;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobileImg1 {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .mobileImg {
+    display: none;
+  }
+
+  .sliderImg .mobileImg {
+    width: 100%;
+    padding: 0;
+  }
+  img.d-block.w-100 {
+    height: 800px;
+  }
+  .mardiHeader {
+    font-size: 40px;
+    justify-content: center;
+  }
+  span .word {
+    font-size: 40px;
+  }
+  p.read-more-wrap {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 20px;
+    text-align: justify;
+  }
+  .cards-list {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+  .card {
+    margin: 30px 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mobileImg1 {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+  img.d-block.w-100 {
+    height: 800px;
+  }
+  .card {
+    width: 21%;
+  }
+  .mardiHeader {
+    padding-right: 270px;
+  }
+  p.read-more-wrap {
+    padding: 0 150px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.7;
+  }
+}

@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
+nav {
+  height: 6rem;
+  width: 100vw;
+  background: linear-gradient(242deg, #9453a6 9%, #8cbf3f 45%, #f2cc0f 94%);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  z-index: 10;
+}
+
+/*Styling logo*/
+.logo {
+  padding: 1vh 1vw;
+  text-align: center;
+}
+.logo img {
+  height: 5rem;
+  width: 5rem;
+  align-items: center;
+}
+
+/*Styling Links*/
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 0;
+}
+.nav-links li a {
+  text-decoration: none;
+  margin: 0 0.7vw;
+  color: #0d0d0d;
+  transition: letter-spacing 0.5s;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'pattaya';
+  letter-spacing: 1px;
+}
+.nav-links li a:hover {
+  color: #f2f2f2;
+}
+.nav-links li {
+  position: relative;
+}
+.fade:not(.show) {
+  opacity: 1;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: #f2f5f7;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  nav {
+    position: fixed;
+    z-index: 9999;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+  .nav-links {
+    position: absolute;
+    background: linear-gradient(242deg, #9453a6 9%, #8cbf3f 45%, #f2cc0f 94%);
+    height: 300px;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    margin: 0 auto;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 80% -10%);
+    -webkit-clip-path: circle(1000px at 80% -10%);
+    pointer-events: all;
+  }
+
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.7s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li a {
+    font-size: 18px;
+  }
+  .fade:not(.show) {
+    opacity: 1;
+  }
+  /*Animating Hamburger Icon on Click*/
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    transition: all 0.7s ease;
+    width: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 767px) {
+  nav {
+    position: fixed;
+    z-index: 9999;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+  .nav-links {
+    position: absolute;
+    background: linear-gradient(242deg, #9453a6 9%, #8cbf3f 45%, #f2cc0f 94%);
+    height: 300px;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    margin: 0 auto;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 80% -10%);
+    -webkit-clip-path: circle(1000px at 80% -10%);
+    pointer-events: all;
+  }
+
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.7s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.8s;
+  }
+
+  .fade:not(.show) {
+    opacity: 1;
+  }
+  /*Animating Hamburger Icon on Click*/
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    transition: all 0.7s ease;
+    width: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}

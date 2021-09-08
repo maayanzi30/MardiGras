@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: #ece8e3;
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+
+.container {
+  max-width: 100%;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.container h2 {
+  color: black;
+  padding-bottom: 40px;
+  text-align: center;
+  font-family: 'Pattaya';
+  font-size: 3em;
+  font-weight: normal;
+  padding: 60px 0 20px 40px;
+}
+
+.accordion1 {
+  width: 60%;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 30px;
+  color: white;
+  border: 2px solid black;
+  margin: 10px auto;
+}
+
+.accordion1 .fa-minus {
+  display: none;
+}
+
+.accordion1.purple {
+  background-color: purple;
+  color: white;
+  opacity: 0.9;
+}
+
+.accordion1.green {
+  background-color: #8cbf3f;
+  border: 2px solid black;
+}
+.accordion1.yellow {
+  background-color: #f2cc0f;
+  border: 2px solid black;
+}
+.accordion1.black {
+  background-color: black;
+  border: 2px solid black;
+  opacity: 0.9;
+}
+.accordion1.black i {
+  color: white;
+}
+.active .fa-minus {
+  display: block;
+}
+.active .fa-plus {
+  display: none;
+}
+
+.panal {
+  font-size: 18px;
+  text-align: justify;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  max-height: 0;
+  width: 60%;
+  margin: 10px auto;
+}
+.panal p {
+  font-size: 20px;
+  font-family: 'Roboto', 'sans-serif';
+}
+i.fas {
+  font-size: 16px;
+  padding: 10px;
+  color: white;
+}
+@media (max-width: 576px) {
+  .container h2 {
+    font-size: 2.5em;
+    padding-top: 150px;
+  }
+  h5 {
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: left;
+  }
+}
+@media (min-width: 576px) {
+  .container h2 {
+    font-size: 2.5em;
+    padding-top: 150px;
+  }
+  h5 {
+    font-weight: 400;
+    font-size: 1.2em;
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .container h2 {
+    font-size: 3em;
+    padding-top: 80px;
+  }
+  h5 {
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container h2 {
+    font-size: 3.5em;
+    padding-top: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container h2 {
+    font-size: 4em;
+    padding-top: 80px;
+  }
+}
